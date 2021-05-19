@@ -3,6 +3,8 @@ $table->foreign('product_id')
   ->references('id')->on('products')
   ->onDelete('cascade')
   ->onUpdate('cascade');
+  
+$table->foreignId('user1_id')->constrained('user');
 you also can easily make a delete and create function like:
 for the web: 
 Route::get('products/{product}/delete', 'ProductController@delete')
