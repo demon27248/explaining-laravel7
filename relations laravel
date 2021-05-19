@@ -1,5 +1,0 @@
-in laravel u can easily set up the foreign keys with in the migration: 
-$table->foreign('product_id')
-  ->references('id')->on('products')
-  ->onDelete('cascade')
-  ->onUpdate('cascade');

@@ -1,0 +1,16 @@
+in laravel u can easily set up the foreign keys with in the migration: 
+$table->foreign('product_id')
+  ->references('id')->on('products')
+  ->onDelete('cascade')
+  ->onUpdate('cascade');
+you also can easily make a delete and create function like:
+for the web: 
+Route::get('products/{product}/delete', 'ProductController@delete')
+  ->name('products.delete');
+in the controller u need to make a new function called delete.
+the form method is @method('DELETE')
+the action is products.destroy
+and in the destroy function 
+its like 
+$product->delete();
+return redirect()->route('products.index');
