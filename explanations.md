@@ -27,5 +27,14 @@ now that the database is created and the laravel project u can start.
 enter the database name in the .env file.
 in your laragon edit the public file.
 
+for bootstrap:
+composer require laravel/ui
+php artisan ui bootstrap --auth
+npm install
+npm run dev
+
+to create a full model:
+php artisan make:model --all **NAME**
+
 
 
